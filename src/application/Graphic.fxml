@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane prefWidth="660.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="application.GraphicController">
+   <center>
+      <HBox prefHeight="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" spacing="5.0">
+               <children>
+                  <JFXButton fx:id="add" onAction="#onadd" prefWidth="68.0" text="Add" textAlignment="CENTER" />
+                  <JFXButton fx:id="remove" onAction="#onremove" text="Remove" />
+                  <JFXButton fx:id="update" onAction="#onupdate" text="Update" />
+                  <JFXButton fx:id="btnimport" onAction="#onimport" text="Import" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox>
+               <children>
+                  <JFXTreeTableView fx:id="table" prefWidth="400.0">
+                     <columns>
+                        <TreeTableColumn fx:id="colname" prefWidth="106.0" resizable="false" text="Name" />
+                        <TreeTableColumn fx:id="collink" prefWidth="222.0" resizable="false" text="Link" />
+                        <TreeTableColumn fx:id="language" prefWidth="70.0" resizable="false" text="Language" />
+                     </columns>
+                  </JFXTreeTableView>
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <JFXTextField fx:id="search" onKeyPressed="#onsearch" promptText="Search name" />
+                  <JFXComboBox fx:id="select" onAction="#onselect" prefHeight="32.0" prefWidth="164.0" promptText="Filter language">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="286.0" prefWidth="164.0">
+                     <children>
+                        <VBox fx:id="boxradio" spacing="5.0">
+                           <children>
+                              <Label text="Rating" />
+                              <JFXRadioButton fx:id="radionone" onAction="#onselect" selected="true" text="None">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="radio" />
+                                 </toggleGroup>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="radiobest" onAction="#onselect" text="Best" toggleGroup="$radio" />
+                              <JFXRadioButton fx:id="radiopoor" onAction="#onselect" text="Poor" toggleGroup="$radio" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+</BorderPane>
