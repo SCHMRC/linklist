@@ -8,14 +8,17 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-10">
 		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="limit-modules" value="java.se,jdk.accessibility,jdk.dynalink,jdk.httpserver,jdk.jartool,jdk.javadoc,jdk.jconsole,jdk.jshell,jdk.jsobject,jdk.management.jfr,jdk.net,jdk.nio.mapmode,jdk.sctp,jdk.security.auth,jdk.security.jgss,jdk.unsupported,jdk.unsupported.desktop,jdk.xml.dom,jdk.charsets,jdk.hotspot.agent,jdk.internal.vm.ci,jdk.jstatd,jdk.jcmd,jdk.crypto.cryptoki,jdk.naming.rmi,jdk.zipfs,jdk.editpad,java.smartcardio,jdk.jpackage,jdk.naming.dns,jdk.localedata"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/marcoschiavo/Downloads/jfoenix-9.0.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

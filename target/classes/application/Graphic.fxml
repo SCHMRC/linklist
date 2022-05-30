@@ -8,13 +8,11 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane prefWidth="660.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="application.GraphicController">
+<BorderPane prefWidth="660.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GraphicController">
    <center>
       <HBox prefHeight="400.0" BorderPane.alignment="CENTER">
          <children>
@@ -31,13 +29,7 @@
             </VBox>
             <VBox>
                <children>
-                  <JFXTreeTableView fx:id="table" prefWidth="400.0">
-                     <columns>
-                        <TreeTableColumn fx:id="colname" prefWidth="106.0" resizable="false" text="Name" />
-                        <TreeTableColumn fx:id="collink" prefWidth="222.0" resizable="false" text="Link" />
-                        <TreeTableColumn fx:id="language" prefWidth="70.0" resizable="false" text="Language" />
-                     </columns>
-                  </JFXTreeTableView>
+                  <JFXTreeTableView fx:id="table" prefWidth="400.0" />
                </children>
             </VBox>
             <VBox spacing="5.0">
